@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Control_AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width:100%">
+        <div id="Header" style="width:1000px; background-color:darkblue; height:55px;" >
+            <img src="/pix/tb.png" alt="terrybaby" style="width:100px;height:50px;"/>
+            <a href="~/Default.aspx" runat="server">Home</a>&nbsp;&nbsp;&nbsp;<a href="~/ContactUs.aspx" runat="server">Contact Us</a>&nbsp;&nbsp;&nbsp;<a href="~/AboutUs.aspx" runat="server">About Us</a>&nbsp;&nbsp;&nbsp;<a href="/Control/default.aspx" runat="server">Login</a>
+        </div>
+
+        <div id="maincontent" style="width:1000px; background-color:lightblue; height:400px; color: darkblue; word-wrap: break-word/">
+            <asp:ContentPlaceHolder id="textMainContent" runat="server">
+                My Name is Terry Barthelemy. I'm an aspring software engineer. I hope to become a data scientist one day. I hail from Boston, Massachsetts. I am 28 years old. My hobbies are playing basketball, traveling and playing video games.
+                <br/>
+                <br/>
+                <img src="/pix/Greek.jpg" alt="greek" style="width:300px;height:300px;"/>
+
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <div id="Footer" style="width:1000px; background-color:darkblue; color: lightblue; height:20px; text-align: center;">
+             ©Powered By Terry Baby™
+
+        </div>
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+
+

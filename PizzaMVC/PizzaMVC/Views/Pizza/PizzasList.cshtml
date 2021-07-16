@@ -1,0 +1,23 @@
+﻿@model PizzaMVC.ViewModels.Home.PizzaListViewModel
+
+@{
+    ViewBag.Title = "PizzasList";
+}
+
+<h2>Pizzas:</h2>
+
+@Html.ListBox("pizzasList", Model.PizzaList)
+
+<h2> Highest Pizza </h2>
+
+<dl>
+
+    <dt>Type of Pizza</dt>
+    <dd>@Model.PizzaCost.TypeOfPizza</dd>
+
+    <dt>Cost of Pizza</dt>
+    <dd>@Model.PizzaCost.PizzaPrice</dd>
+
+</dl>
+
+

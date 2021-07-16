@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PizzaMVC.Models.Pizza>
+
+<div class="jumbotron" style="background-color:lightgreen; font-family:Arial, Helvetica, sans-serif">
+    <center><h1 style="font-family:Magneto">Terry's Pizza</h1></center>
+    <center><h3 style="font-family:'Goudy Stout'">CRUD!</h3></center>
+    <p>
+        <table class="table" style="font-size:14px">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TypeOfPizza)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PizzaPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Toppings)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PizzaSize)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TypeOfPizza)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PizzaPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Toppings)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PizzaSize)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Create New", "Create") |
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Pizza_ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Pizza_ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Pizza_ID })
+                    </td>
+                </tr>}
+    </p>
+</div>
